@@ -50,23 +50,13 @@ cd filmlog-frontend
 npm install
 ```
 
-3. **Configure a URL da API:**
-
-Crie um arquivo `.env.local` com o seguinte conteúdo:
-
-```env
-NEXT_PUBLIC_API_URL=http://localhost:8080
-```
-
-> Altere conforme o endereço do seu backend.
-
-4. **Inicie o servidor de desenvolvimento:**
+3. **Inicie o servidor de desenvolvimento:**
 
 ```bash
 npm run dev
 ```
 
-5. Acesse em: [http://localhost:3000](http://localhost:3000)
+4. Acesse em: [http://localhost:3000](http://localhost:3000)
 
 ---
 
