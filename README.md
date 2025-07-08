@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Filmlog — Frontend
 
-## Getting Started
+O **Filmlog** é uma aplicação web para organização e acompanhamento de filmes que você pretende assistir. Este repositório contém o código-fonte do **frontend**, desenvolvido em **Next.js** com **TypeScript**.
 
-First, run the development server:
+---
+
+## 📚 Sobre o projeto
+
+A proposta do Filmlog é fornecer uma interface simples para você montar sua lista de filmes, acompanhar o progresso e explorar novos títulos. O app também possui integração com autenticação baseada em **JWT**.
+
+O projeto foi desenvolvido por **Mateus Dias Oliveira** como prática de aprendizado em desenvolvimento fullstack e será evoluído com novas funcionalidades.
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Integração com API Spring Boot via JWT](https://github.com/mateusnoites/filmlog-api)
+
+---
+
+## 🔐 Autenticação
+
+A autenticação é feita via **JWT**. O token é armazenado no `localStorage` após o login e enviado no header de cada requisição autenticada:
+
+```
+Authorization: Bearer seu_token_jwt
+```
+
+Rotas protegidas (como a página inicial `/`) redirecionam para `/login` se o usuário não estiver autenticado.
+
+---
+
+## 📦 Instalação e execução
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/mateusnoites/filmlog-frontend.git
+cd filmlog-frontend
+```
+
+2. **Instale as dependências:**
+
+```bash
+npm install
+```
+
+3. **Configure a URL da API:**
+
+Crie um arquivo `.env.local` com o seguinte conteúdo:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8080
+```
+
+> Altere conforme o endereço do seu backend.
+
+4. **Inicie o servidor de desenvolvimento:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Acesse em: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Funcionalidades
 
-## Learn More
+- ✅ Cadastro e login de usuários
+- ✅ Armazenamento do token JWT
+- ✅ Redirecionamento automático de usuários não logados
+- ✅ Estilo limpo e responsivo com Tailwind
+- 🔜 Gerenciamento de lista de filmes
+- 🔜 Sistema de favoritos, categorias e notas
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💻 Backend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O backend está disponível em [`filmlog-api`](https://github.com/mateusnoites/filmlog-api)
+---
 
-## Deploy on Vercel
+## 🧑‍💻 Autor
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Mateus Dias Oliveira**  
+Graduando em Tecnologia da Informação - UFRN  
+[https://github.com/mateusnoites](https://github.com/mateusnoites)
